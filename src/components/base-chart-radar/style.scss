@@ -1,0 +1,247 @@
+.base-chart-radar-wrapper {
+  position: relative;
+  border: 1px solid #fcac00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .chart-labels {
+    .label-container {
+      position: absolute;
+      z-index: 10;
+      color: #415075;
+    }
+
+    .top-left {
+      &__large {
+        font-size: 11px;
+        top: 46px;
+        left: 66px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 14px;
+        left: 16px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 13px;
+        left: 21px;
+      }
+    }
+    .top-right {
+      &__large {
+        font-size: 11px;
+        top: 48px;
+        left: 362px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 14px;
+        left: 240px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 13px;
+        left: 180px;
+      }
+    }
+    .left {
+      &__large {
+        font-size: 11px;
+        top: 216px;
+        left: 0px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 126px;
+        left: 6px;
+        width: 30px;
+        line-height: 13.62px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 100px;
+        left: 0px;
+        width: 20px;
+      }
+    }
+    .right {
+      &__large {
+        font-size: 11px;
+        top: 216px;
+        left: 458px;
+        text-align: left;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 126px;
+        left: 304px;
+        width: 30px;
+        line-height: 13.62px;
+        text-align: left;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 100px;
+        left: 232px;
+        width: 28px;
+        text-align: left;
+      }
+    }
+    .bottom-left {
+      &__large {
+        font-size: 11px;
+        top: 392px;
+        left: 106px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 252px;
+        left: 52px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 200px;
+        left: 42px;
+      }
+    }
+    .bottom-right {
+      &__large {
+        font-size: 11px;
+        top: 392px;
+        left: 358px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 252px;
+        left: 240px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 200px;
+        left: 178px;
+      }
+    }
+
+    .top-left-t2 {
+      &__large {
+        font-size: 11px;
+        top: 46px;
+        left: 138px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 14px;
+        left: 82px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 13px;
+        left: 60px;
+      }
+    }
+    .top-right-t2 {
+      &__large {
+        font-size: 11px;
+        top: 46px;
+        left: 360px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 14px;
+        left: 240px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 13px;
+        left: 180px;
+      }
+    }
+    .left-t2 {
+      &__large {
+        font-size: 11px;
+        top: 216px;
+        left: 40px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 132px;
+        left: 14px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 106px;
+        left: 8px;
+      }
+    }
+    .right-t2 {
+      &__large {
+        font-size: 11px;
+        top: 216px;
+        left: 458px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 128px;
+        left: 304px;
+        width: 20px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 106px;
+        left: 232px;
+      }
+    }
+    .bottom-left-t2 {
+      &__large {
+        font-size: 11px;
+        top: 390px;
+        left: 124px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 252px;
+        left: 72px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 200px;
+        left: 52px;
+      }
+    }
+    .bottom-right-t2 {
+      &__large {
+        font-size: 11px;
+        top: 392px;
+        left: 358px;
+      }
+      &__medium {
+        font-size: 10px;
+        top: 252px;
+        left: 238px;
+      }
+      &__small {
+        font-size: 5.82px;
+        top: 200px;
+        left: 178px;
+      }
+    }
+  }
+  .chart-container {
+    border: 1px solid blueviolet;
+    // z-index: 10;
+    // position: absolute;
+    // left: calc((524px - 356px) / 2);
+    // top: calc((362px - 356px) / 2);
+
+    // width: 456px; //P1
+    // height: 400px;
+
+    // width: 212px;  //p2
+    // height: 212px;
+
+    // width: 264px; // p3
+    // height: 264px;
+  }
+}

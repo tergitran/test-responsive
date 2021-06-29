@@ -1,0 +1,51 @@
+.measure-result-wrapper {
+  background: #f4f6f9;
+  border-radius: 4px;
+
+  width: 224px;
+  height: 96px;
+
+  .score {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+
+    span {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .advice-normal {
+    margin: auto;
+    background: #139cab;
+    border-radius: 10px;
+    width: 96px;
+    height: 20px;
+    font-weight: bold;
+    font-size: 10px;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .advice-warning {
+    margin: auto;
+    background: #d82d4c;
+    border-radius: 10px;
+    width: 96px;
+    height: 20px;
+    font-weight: bold;
+    font-size: 10px;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-right: 4px;
+    }
+  }
+}
