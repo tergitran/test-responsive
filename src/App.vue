@@ -3,7 +3,16 @@
     <div class="circle circle-A" id="tooltip-target-1">
       A
     </div>
-    <b-tooltip target="tooltip-target-1" triggers="hover">
+    <b-button class="circle circle-A" id="tooltip-target-2">
+      B
+    </b-button>
+    <b-button class="circle circle-A" id="tooltip-target-2">
+      B
+    </b-button>
+    <b-tooltip target="tooltip-target-1" triggers="hover focus">
+      I am tooltip <b>component</b> content!
+    </b-tooltip>
+    <b-tooltip target="tooltip-target-2" triggers="hover">
       I am tooltip <b>component</b> content!
     </b-tooltip>
   </div>
