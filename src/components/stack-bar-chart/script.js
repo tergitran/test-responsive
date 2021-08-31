@@ -20,12 +20,11 @@ export default {
       chartId: Math.random()
         .toString(36)
         .substring(7),
+      isMoblie: true,
     };
   },
   mounted() {
     let ctx = document.getElementById(this.chartId).getContext("2d");
-
-    console.log(Chart.elements.Point.prototype.draw);
 
     // let draw = Chart.elements.Point.prototype.draw;
     // Chart.elements.Point.prototype.draw = function() {
@@ -53,8 +52,7 @@ export default {
         var ctx = this._chart.ctx;
         // console.log("this", this);
         // console.log("ctx", ctx);
-        console.log("this", self.dataList[0].length - 1);
-        console.log("index 11", this);
+
         // var pointStyle = vm.pointStyle;
         // var rotation = vm.rotation;
         // var radius = vm.radius;
@@ -157,6 +155,51 @@ export default {
         yRangeEnd: 45,
       },
       options: {
+        animation: {
+          onComplete: function(animation) {
+            if (!self.rectangleSet) {
+              var sourceCanvas = self.chart.canvas;
+              console.log("animation", animation);
+              console.log("source canvas", sourceCanvas);
+              console.log("selfe chart", self.chart);
+              var copyWidth = self.chart.scales["y-axis-0"].width;
+              var copyHeight = self.chart.scales["y-axis-0"].height + 10;
+              var targetCtx = document
+                .getElementById("myChartAxis")
+                .getContext("2d");
+              console.log("targetCtx", targetCtx);
+              targetCtx.canvas.width = copyWidth;
+              targetCtx.canvas.height = copyHeight;
+              targetCtx.drawImage(
+                sourceCanvas,
+                0,
+                0,
+                copyWidth,
+                copyHeight,
+                0,
+                0,
+                copyWidth,
+                copyHeight
+              );
+
+              var sourceCtx = sourceCanvas.getContext("2d");
+
+              // Normalize coordinate system to use css pixels.
+
+              sourceCtx.clearRect(0, 0, copyWidth, copyHeight);
+              self.rectangleSet = true;
+            }
+          },
+          onProgress: function() {
+            if (self.rectangleSet === true) {
+              console.log("self ongfprojgea", self);
+              var copyWidth = self.scales["y-axis-0"].width;
+              var copyHeight = self.scales["y-axis-0"].height + 10;
+              var sourceCtx = self.chart.canvas.getContext("2d");
+              sourceCtx.clearRect(0, 0, copyWidth, copyHeight);
+            }
+          },
+        },
         plugins: {
           // Change options for ALL labels of THIS CHART
           datalabels: {

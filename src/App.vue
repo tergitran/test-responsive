@@ -15,105 +15,6 @@
         </div>
       </div>
       <div class="chart-box__content">
-        <!-- <b-tabs pills>
-          <b-tab title="身体測定">
-            <template #title>
-              身体測定
-              <img src="@/assets/warning.svg" />
-            </template>
-            <div class="measure-box">
-              <div class="measure-box__top">
-                <div class="name">BMI</div>
-                <div class="standard-value">基準値：18.5〜24.9</div>
-              </div>
-              <div class="measure-box__bottom">
-                <div class="left-content">
-                  <div class="score">26.5 <span>kg/m2</span></div>
-                  <div class="advice">改善アドバイス</div>
-                </div>
-                <div class="right-content">
-                  <BaseChartLine
-                    :dataset="[13.3, 12.5, 12.7, 14.5, 13.7]"
-                    :min="11"
-                    :max="15"
-                    :standardMin="12.5"
-                    :standardMax="14.5"
-                    :labels="['2017', '2018', '2019', '2020', '2021']"
-                  ></BaseChartLine>
-                </div>
-              </div>
-            </div>
-            <div class="measure-box">
-              <div class="measure-box__top">
-                <div class="name">BMI</div>
-                <div class="standard-value">基準値：18.5〜24.9</div>
-              </div>
-              <div class="measure-box__bottom">
-                <div class="left-content">
-                  <div class="score">26.5 <span>kg/m2</span></div>
-                  <div class="advice">改善アドバイス</div>
-                </div>
-                <div class="right-content">
-                  <BaseChartLine
-                    :dataset="[13.3, 12.5, 12.7, 14.5, 13.7]"
-                    :min="11"
-                    :max="15"
-                    :standardMin="12.5"
-                    :standardMax="14.5"
-                    :labels="['2017', '2018', '2019', '2020', '2021']"
-                    :isWarning="true"
-                  ></BaseChartLine>
-                </div>
-              </div>
-            </div>
-            <div class="measure-box">
-              <div class="measure-box__top">
-                <div class="name">BMI</div>
-                <div class="standard-value">基準値：18.5〜24.9</div>
-              </div>
-              <div class="measure-box__bottom">
-                <div class="left-content">
-                  <div class="score">26.5 <span>kg/m2</span></div>
-                  <div class="advice">改善アドバイス</div>
-                </div>
-                <div class="right-content">
-                  <BaseChartLine
-                    :dataset="[13.3, 12.5, 12.7, 14.5, 13.7]"
-                    :min="11"
-                    :max="15"
-                    :standardMin="12.5"
-                    :standardMax="14.5"
-                    :labels="['2017', '2018', '2019', '2020', '2021']"
-                  ></BaseChartLine>
-                </div>
-              </div>
-            </div>
-          </b-tab>
-          <b-tab title="貧血">
-            <BaseChartLine
-              :dataset="[22, 15, 21, 27, 12]"
-              :labels="['2012', '2013', '2014', '2015', '2016']"
-              :min="10"
-              :max="30"
-              :standardMin="10"
-              :standardMax="28"
-            ></BaseChartLine>
-          </b-tab>
-          <b-tab title="血圧">
-            <BaseChartLine
-              :dataset="[3, 5, 8, 5, 2]"
-              :labels="['2012', '2013', '2014', '2015', '2016']"
-              :min="0"
-              :max="10"
-              :standardMin="0"
-              :standardMax="5.15"
-            ></BaseChartLine>
-          </b-tab>
-          <b-tab title="血糖"> </b-tab>
-
-          <b-tab title="肝機能">Tab contents 1</b-tab>
-          <b-tab title="脂質"> contents 2</b-tab>
-        </b-tabs> -->
         <BaseTabBoxContent :tabList="tabList" :type="2">
           <template v-slot:tab-1>
             <div class="measure-box">
@@ -123,7 +24,7 @@
               </div>
               <div class="measure-box__bottom">
                 <MeasureResult></MeasureResult>
-                <BaseChartLine
+                <!-- <BaseChartLine
                   :dataset="[13.3, 12.5, 12.7, 14.5, 13.7]"
                   :min="11"
                   :max="15"
@@ -131,7 +32,7 @@
                   :standardMax="14.5"
                   :labels="['2017', '2018', '2019', '2020', '2021']"
                   :isWarning="false"
-                ></BaseChartLine>
+                ></BaseChartLine> -->
               </div>
             </div>
             <div class="measure-box">
@@ -147,7 +48,7 @@
                     isWarning: true,
                   }"
                 ></MeasureResult>
-                <BaseChartLine
+                <!-- <BaseChartLine
                   :dataset="[13.3, 12.5, 12.7, 14.5, 11.3]"
                   :min="11"
                   :max="15"
@@ -155,7 +56,7 @@
                   :standardMax="14.5"
                   :labels="['2017', '2018', '2019', '2020', '2021']"
                   :isWarning="true"
-                ></BaseChartLine>
+                ></BaseChartLine> -->
               </div>
             </div>
           </template>
@@ -167,7 +68,7 @@
               </div>
               <div class="measure-box__bottom">
                 <MeasureResult></MeasureResult>
-                <BaseChartLine
+                <!-- <BaseChartLine
                   :dataset="[13.3, 12.5, 12.7, 14.5, 13.7]"
                   :min="11"
                   :max="15"
@@ -175,7 +76,7 @@
                   :standardMax="14.5"
                   :labels="['2017', '2018', '2019', '2020', '2021']"
                   :isWarning="true"
-                ></BaseChartLine>
+                ></BaseChartLine> -->
               </div>
             </div>
           </template>
@@ -188,6 +89,16 @@
         :labels="stackBarData.labels"
         :dataList="stackBarData.dataList"
       ></StackBarChart>
+    </div>
+    <div :style="{ marginTop: '30px', paddingBottom: '30px' }" v-if="isLoaded">
+      <!-- :dataset="[13.3, 45.5, 17, 14.5, 3.3]" -->
+      <BaseChartLine
+        :dataset="dataset"
+        :standardMin="standardMin"
+        :standardMax="standardMax"
+        :labels="labelList"
+        :isWarning="true"
+      ></BaseChartLine>
     </div>
   </div>
 </template>
@@ -208,6 +119,7 @@ export default {
   },
   data() {
     return {
+      isLoaded: false,
       currentTabIndex: 0,
       tabList: [
         {
@@ -256,26 +168,48 @@ export default {
         },
       ],
       stackBarData: {
-        labels: [
-          "2021/1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-        ],
+        labels: ["2021/1", "2", "3", "4", "5"],
         dataList: [
-          [22, 29, 35, 16, 28, 21, 39, 27, 35, 44, 14, 27],
-          [12, 2, 9, 12, 8, 12, 19, 6, 3, 12, 9, 7],
+          [22, 29, 35, 44, 32],
+          [12, 2, 9, 25, 32],
         ],
+        // labels: [
+        //   "2021/1",
+        //   "2",
+        //   "3",
+        //   "4",
+        //   "5",
+        //   "6",
+        //   "7",
+        //   "8",
+        //   "9",
+        //   "10",
+        //   "11",
+        //   "12",
+        // ],
+        // dataList: [
+        //   [22, 29, 35, 16, 28, 21, 39, 27, 35, 44, 14, 27],
+        //   [12, 2, 9, 12, 8, 12, 19, 6, 3, 12, 9, 7],
+        // ],
       },
+      dataset: [],
+      labelList: [],
+      standardMin: null,
+      standardMax: null,
     };
+  },
+  created() {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => response.json())
+      .then((json) => {
+        this.isLoaded = true;
+        console.log(json);
+        this.dataset = [23.3, 15.5, 37, 24.5, 13.3];
+        this.labelList = ["2017", "2018", "2019", "2020", "2021"];
+
+        this.standardMin = 10;
+        this.standardMax = 35;
+      });
   },
 };
 </script>
