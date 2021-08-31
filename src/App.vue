@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <div class="circle circle-A" id="tooltip-target-1">
+    <!-- <div class="circle circle-A" id="tooltip-target-1">
       A
-    </div>
-    <b-button class="circle circle-A" id="tooltip-target-2">
+    </div> -->
+    <button class="circle circle-A" id="tooltip-target-1">
+      A
+    </button>
+    <a class="circle circle-A" id="tooltip-target-2">
       B
-    </b-button>
-    <b-button class="circle circle-A" id="tooltip-target-2">
-      B
-    </b-button>
-    <b-tooltip target="tooltip-target-1" triggers="hover focus">
+    </a>
+    <!-- <b-tooltip target="tooltip-target-1" triggers="hover focus">
       I am tooltip <b>component</b> content!
+    </b-tooltip> -->
+    <b-tooltip target="tooltip-target-1" triggers="hover">
+      Thanks <b>Linh 2K</b> !
     </b-tooltip>
     <b-tooltip target="tooltip-target-2" triggers="hover">
-      I am tooltip <b>component</b> content!
+      Thanks <b>Linh 2K</b> !
     </b-tooltip>
   </div>
 </template>
