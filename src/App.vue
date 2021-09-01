@@ -3,7 +3,11 @@
     <!-- <div class="circle circle-A" id="tooltip-target-1">
       A
     </div> -->
-    <button class="circle circle-A" id="tooltip-target-1">
+    <button
+      @click="$bvModal.show('modal-1')"
+      class="circle circle-A"
+      id="tooltip-target-1"
+    >
       A
     </button>
     <a class="circle circle-A" id="tooltip-target-2">
@@ -18,6 +22,14 @@
     <b-tooltip target="tooltip-target-2" triggers="hover">
       Thanks <b>Linh 2K</b> !
     </b-tooltip>
+
+    <b-modal id="modal-1" scrollable title="Scrollable Content">
+      <p class="my-4" v-for="i in 20" :key="i">
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+        dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+        consectetur ac, vestibulum at eros.
+      </p>
+    </b-modal>
   </div>
 </template>
 
