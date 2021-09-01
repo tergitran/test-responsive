@@ -23,7 +23,12 @@
       Thanks <b>Linh 2K</b> !
     </b-tooltip>
 
-    <b-modal id="modal-1" scrollable title="Scrollable Content">
+    <b-modal
+      id="modal-1"
+      scrollable
+      title="Scrollable Content"
+      :hide-footer="true"
+    >
       <p class="my-4" v-for="i in 20" :key="i">
         Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
@@ -52,7 +57,15 @@ export default {
 <style lang="scss">
 body {
   margin: 0;
+
+  .modal-dialog {
+    margin: 24px 16px;
+  }
+  .modal-dialog-scrollable {
+    max-height: calc(100% - 48px);
+  }
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
