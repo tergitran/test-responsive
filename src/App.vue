@@ -3,7 +3,11 @@
     <!-- <div class="circle circle-A" id="tooltip-target-1">
       A
     </div> -->
-    <button
+    <div class="container">
+      <div class="child">I love you so much</div>
+      <img src="@/assets/emp-logo2.svg" />
+    </div>
+    <!-- <button
       @click="$bvModal.show('modal-1')"
       class="circle circle-A"
       id="tooltip-target-1"
@@ -13,15 +17,12 @@
     <a class="circle circle-A" id="tooltip-target-2">
       B
     </a>
-    <!-- <b-tooltip target="tooltip-target-1" triggers="hover focus">
-      I am tooltip <b>component</b> content!
-    </b-tooltip> -->
     <b-tooltip target="tooltip-target-1" triggers="hover">
       Thanks <b>Linh 2K</b> !
     </b-tooltip>
     <b-tooltip target="tooltip-target-2" triggers="hover">
       Thanks <b>Linh 2K</b> !
-    </b-tooltip>
+    </b-tooltip> -->
 
     <b-modal
       id="modal-1"
@@ -42,15 +43,31 @@
 // import BaseChartLine from "./components/base-chart-line/base-chart-line.vue";
 // import BaseTabBoxContent from "./components/base-tab-box-content/base-tab-box-content.vue";
 // import MeasureResult from "./components/measure-result/measure-result.vue";
-// import StackBarChart from "./components/stack-bar-chart/stack-bar-chart.vue";
 
 export default {
   name: "App",
-  components: {},
   data() {
-    return {};
+    return {
+      chartBarData: {},
+    };
   },
-  created() {},
+  created() {
+    let labels = [];
+    let dataList = [[], []];
+    let initYear = 2000;
+    let num = 300;
+    let temp = num + initYear;
+    while (initYear < temp) {
+      labels.push(initYear.toString());
+      initYear++;
+      dataList[0].push(Math.floor(Math.random() * 30));
+      dataList[1].push(Math.floor(Math.random() * 30));
+    }
+    console.log("labels", labels);
+    console.log("dataList", dataList);
+    this.chartBarData = { labels, dataList };
+    console.log("chartBarData", this.chartBarData);
+  },
 };
 </script>
 
@@ -76,8 +93,24 @@ body {
   background-color: #eff4f6;
   height: calc(100vh - 20px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .container {
+    position: absolute;
+    left: 1;
+    top: 20px;
+    // background: #2c3e50;
+
+    width: max-content;
+    padding: 8px;
+
+    .child {
+      background: yellow;
+      min-width: fit-content;
+    }
+  }
 
   .circle {
     width: 80px;
