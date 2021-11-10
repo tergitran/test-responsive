@@ -4,12 +4,16 @@
       A
     </div> -->
     <div class="container">
-      <div class="child">SVG Logo</div>
-      <img class="logo" src="@/assets/emp-logo2.svg" />
-      <div class="child">PNG home</div>
+      <object :data="require('@/assets/emp-logo2.svg')">
+        <!-- <img src="assets/logo-out-4x.png" /> -->
+        <p>hahahah</p>
+      </object>
+      <!-- <div class="child">SVG Logo</div>
+      <img class="logo" src="./assets/emp-logo2.svg" /> -->
+      <!-- <div class="child">PNG home</div>
       <img class="logo home" src="@/assets/logo-out-4x.png" />
       <div class="child">PNG navigation bar</div>
-      <img class="logo navi" src="@/assets/nav-bar-out-4x.png" />
+      <img class="logo navi" src="@/assets/nav-bar-out-4x.png" /> -->
     </div>
     <!-- <button
       @click="$bvModal.show('modal-1')"
