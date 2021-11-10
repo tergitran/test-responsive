@@ -6,8 +6,6 @@
     <div class="container">
       <div class="child">SVG Logo</div>
       <img class="logo" src="@/assets/emp-logo2.svg" />
-      <div class="child">SVG Logo fixed</div>
-      <img class="logo fixed" src="@/assets/emp-logo2.svg" />
       <div class="child">PNG home</div>
       <img class="logo home" src="@/assets/logo-out-4x.png" />
       <div class="child">PNG navigation bar</div>
