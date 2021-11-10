@@ -4,7 +4,7 @@
       A
     </div> -->
     <div class="container">
-      <div class="child">I love you so much</div>
+      <div class="child">Test Logo</div>
       <img class="logo" src="@/assets/emp-logo2.svg" />
     </div>
     <!-- <button
@@ -107,15 +107,16 @@ body {
     padding: 8px;
 
     .child {
-      background: yellow;
+      // background: yellow;
       min-width: fit-content;
+      margin-bottom: 20px;
     }
   }
 
-  .logo {
-    width: 24px;
-    height: 18px;
-  }
+  // .logo {
+  //   width: 24px;
+  //   height: 18px;
+  // }
   .circle {
     width: 80px;
     height: 80px;
