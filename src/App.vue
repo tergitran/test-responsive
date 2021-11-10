@@ -4,8 +4,12 @@
       A
     </div> -->
     <div class="container">
-      <div class="child">Test Logo</div>
+      <div class="child">SVG Logo</div>
       <img class="logo" src="@/assets/emp-logo2.svg" />
+      <div class="child">PNG home</div>
+      <img class="logo home" src="@/assets/logo-out-4x.png" />
+      <div class="child">PNG navigation bar</div>
+      <img class="logo navi" src="@/assets/nav-bar-out-4x.png" />
     </div>
     <!-- <button
       @click="$bvModal.show('modal-1')"
@@ -117,6 +121,14 @@ body {
   //   width: 24px;
   //   height: 18px;
   // }
+  .home {
+    width: 44px;
+    height: 36px;
+  }
+  .navi {
+    width: 36px;
+    height: 30px;
+  }
   .circle {
     width: 80px;
     height: 80px;
