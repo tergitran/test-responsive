@@ -5,7 +5,7 @@
     </div> -->
     <div class="container">
       <div class="child">I love you so much</div>
-      <img src="@/assets/emp-logo2.svg" />
+      <img class="logo" src="@/assets/emp-logo2.svg" />
     </div>
     <!-- <button
       @click="$bvModal.show('modal-1')"
@@ -112,6 +112,10 @@ body {
     }
   }
 
+  .logo {
+    width: 24px;
+    height: 18px;
+  }
   .circle {
     width: 80px;
     height: 80px;
