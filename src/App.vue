@@ -171,7 +171,7 @@ export default {
   font-size: large;
 }
 #modal {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -182,6 +182,10 @@ export default {
   background-color: brown;
 }
 .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 280px;
   /* width: 100vh; */
   background-color: blueviolet;
