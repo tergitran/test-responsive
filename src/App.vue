@@ -34,9 +34,9 @@
     </b-modal> -->
 
     <button class="button" @click="myFunction">Toggle modal</button>
-    <div id="modal">
+    <!-- <div id="modal">
       <div class="content"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -54,8 +54,16 @@ export default {
   },
   methods: {
     myFunction() {
-      var element = document.getElementById("modal");
-      element.classList.toggle("show");
+      var app = document.getElementById("app");
+      var modal = document.createElement("div");
+      var content = document.createElement("div");
+      // var content = document.createElement("div");
+      content.className = "content";
+      modal.id = "modal";
+      modal.appendChild(content);
+      app.appendChild(modal);
+
+      // var element = document.getElementById("modal");
     },
   },
   created() {
@@ -167,17 +175,17 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  display: none;
+  // display: none;
 }
 .show {
   display: block !important;
   background-color: brown;
-  animation: showModal 4s;
 }
 .content {
   height: 280px;
   /* width: 100vh; */
-  /* background-color: blueviolet; */
+  background-color: blueviolet;
+  animation: showModal 4s;
 }
 
 @keyframes showModal {
@@ -186,7 +194,7 @@ export default {
     transform: translateY(100%);
   }
   to {
-    background-color: brown;
+    background-color: blueviolet;
     transform: translateY(0);
   }
 }
