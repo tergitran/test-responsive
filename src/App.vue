@@ -3,24 +3,6 @@
     <!-- <div class="circle circle-A" id="tooltip-target-1">
       A
     </div> -->
-    <div class="container">
-      <div class="child">SVG Logo by object</div>
-      <object :data="require('@/assets/emp-logo2.svg')">
-        <!-- <img src="assets/logo-out-4x.png" /> -->
-        <p>hahahah</p>
-      </object>
-      <div class="child">SVG Logo by object fix translate</div>
-      <object :data="require('@/assets/emp-logo2.svg')">
-        <!-- <img src="assets/logo-out-4x.png" /> -->
-        <p>hahahah</p>
-      </object>
-      <div class="child">SVG Logo</div>
-      <img class="logo" src="./assets/emp-logo2.svg" />
-      <div class="child">PNG home</div>
-      <img class="logo home" src="@/assets/logo-out-4x.png" />
-      <div class="child">PNG navigation bar</div>
-      <img class="logo navi" src="@/assets/nav-bar-out-4x.png" />
-    </div>
     <!-- <button
       @click="$bvModal.show('modal-1')"
       class="circle circle-A"
@@ -38,7 +20,7 @@
       Thanks <b>Linh 2K</b> !
     </b-tooltip> -->
 
-    <b-modal
+    <!-- <b-modal
       id="modal-1"
       scrollable
       title="Scrollable Content"
@@ -49,7 +31,12 @@
         dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
         consectetur ac, vestibulum at eros.
       </p>
-    </b-modal>
+    </b-modal> -->
+
+    <button class="button" @click="myFunction">Toggle modal</button>
+    <div id="modal">
+      <div class="content"></div>
+    </div>
   </div>
 </template>
 
@@ -64,6 +51,12 @@ export default {
     return {
       chartBarData: {},
     };
+  },
+  methods: {
+    myFunction() {
+      var element = document.getElementById("modal");
+      element.classList.toggle("show");
+    },
   },
   created() {
     let labels = [];
@@ -86,76 +79,115 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  margin: 0;
+// body {
+//   margin: 0;
 
-  .modal-dialog {
-    margin: 24px 16px;
-  }
-  .modal-dialog-scrollable {
-    max-height: calc(100% - 48px);
-  }
+//   .modal-dialog {
+//     margin: 24px 16px;
+//   }
+//   .modal-dialog-scrollable {
+//     max-height: calc(100% - 48px);
+//   }
+// }
+
+// #app {
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+
+//   background-color: #eff4f6;
+//   height: calc(100vh - 20px);
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+
+//   .container {
+//     position: absolute;
+//     left: 1;
+//     top: 20px;
+//     // background: #2c3e50;
+
+//     width: max-content;
+//     padding: 8px;
+
+//     .child {
+//       // background: yellow;
+//       min-width: fit-content;
+//       margin-bottom: 20px;
+//     }
+//   }
+
+//   // .logo {
+//   //   width: 24px;
+//   //   height: 18px;
+//   // }
+//   .home {
+//     width: 44px;
+//     height: 36px;
+//   }
+//   .navi {
+//     width: 36px;
+//     height: 30px;
+//   }
+//   .fixed {
+//     -webkit-transform: translate3d(0, 0, 0);
+//   }
+//   object {
+//     svg {
+//       -webkit-transform: translate3d(0, 0, 0);
+//     }
+//   }
+//   .circle {
+//     width: 80px;
+//     height: 80px;
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     font-size: 28px;
+//     align-items: center;
+//     background: yellowgreen;
+//   }
+// }
+* {
+  padding: 0;
+  margin: 0;
+}
+#app {
+  text-align: center;
+}
+.button {
+  margin-top: 50px;
+  font-size: large;
+}
+#modal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.show {
+  display: block !important;
+  background-color: brown;
+  animation: showModal 4s;
+}
+.content {
+  height: 280px;
+  /* width: 100vh; */
+  /* background-color: blueviolet; */
 }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-
-  background-color: #eff4f6;
-  height: calc(100vh - 20px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .container {
-    position: absolute;
-    left: 1;
-    top: 20px;
-    // background: #2c3e50;
-
-    width: max-content;
-    padding: 8px;
-
-    .child {
-      // background: yellow;
-      min-width: fit-content;
-      margin-bottom: 20px;
-    }
+@keyframes showModal {
+  from {
+    background-color: aqua;
+    transform: translateY(100%);
   }
-
-  // .logo {
-  //   width: 24px;
-  //   height: 18px;
-  // }
-  .home {
-    width: 44px;
-    height: 36px;
-  }
-  .navi {
-    width: 36px;
-    height: 30px;
-  }
-  .fixed {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-  object {
-    svg {
-      -webkit-transform: translate3d(0, 0, 0);
-    }
-  }
-  .circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    font-size: 28px;
-    align-items: center;
-    background: yellowgreen;
+  to {
+    background-color: brown;
+    transform: translateY(0);
   }
 }
 </style>
