@@ -37,7 +37,9 @@
     <!-- <div id="modal">
       <div class="content"></div>
     </div> -->
+    <img src="./assets/emp-logo2.svg" />
     <img src="./assets/dmp-logo-new.svg" />
+    <img src="./assets/logo-not-shadow.svg" width="32" />
   </div>
 </template>
 
