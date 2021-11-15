@@ -37,6 +37,7 @@
     <!-- <div id="modal">
       <div class="content"></div>
     </div> -->
+    <div class="logo"></div>
     <img src="./assets/emp-logo2.svg" />
     <img src="./assets/dmp-logo-new.svg" />
     <img src="./assets/logo-not-shadow.svg" width="32" />
@@ -193,6 +194,14 @@ export default {
   /* width: 100vh; */
   background-color: blueviolet;
   animation: showModal 4s;
+}
+
+.logo {
+  // background-image: url("@./assets/emp-logos.svg");
+  background-image: url("~@/assets/emp-logo2.svg");
+  width: 44px;
+  height: 36px;
+  display: inline-block;
 }
 
 @keyframes showModal {
