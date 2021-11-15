@@ -33,10 +33,11 @@
       </p>
     </b-modal> -->
 
-    <button class="button" @click="myFunction">Toggle modal</button>
+    <!-- <button class="button" @click="myFunction">Toggle modal</button> -->
     <!-- <div id="modal">
       <div class="content"></div>
     </div> -->
+    <img src="./assets/dmp-logo-new.svg" />
   </div>
 </template>
 
