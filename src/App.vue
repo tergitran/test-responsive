@@ -42,6 +42,52 @@
     <img src="./assets/design.svg" />
     <img src="./assets/dmp-logo-new.svg" />
     <img src="./assets/logo-not-shadow.svg" width="32" />
+
+    <svg height="0" width="0" style="position:absolute;margin-left: -100%;">
+      <path
+        id="heart-icon"
+        d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
+	C30,20.335,16,28.261,16,28.261z"
+      />
+
+      <filter id="shadow">
+        <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2" />
+      </filter>
+
+      <filter id="shadow2">
+        <feDropShadow dx="0" dy="0" stdDeviation="0.5" flood-color="cyan" />
+      </filter>
+
+      <filter id="shadow3">
+        <feDropShadow
+          dx="-0.8"
+          dy="-0.8"
+          stdDeviation="0"
+          flood-color="pink"
+          flood-opacity="0.5"
+        />
+      </filter>
+    </svg>
+
+    <div>
+      <svg class="icon" style="fill:pink;" viewBox="0 0 32 32">
+        <g filter="url(#shadow)">
+          <use xlink:href="#heart-icon"></use>
+        </g>
+      </svg>
+
+      <svg class="icon" style="fill:#FE4365;" viewBox="0 0 32 32">
+        <g filter="url(#shadow2)">
+          <use xlink:href="#heart-icon"></use>
+        </g>
+      </svg>
+
+      <svg class="icon" style="fill:pink;" viewBox="0 0 32 32">
+        <g filter="url(#shadow3)">
+          <use xlink:href="#heart-icon"></use>
+        </g>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -203,6 +249,11 @@ export default {
   width: 44px;
   height: 36px;
   display: inline-block;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
 }
 
 @keyframes showModal {
