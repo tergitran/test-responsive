@@ -98,11 +98,52 @@
               height="50"
               flood-color="green"
               flood-opacity="0.5"
+              result="BackgroundImageFix"
             ></feFlood>
           </filter>
         </defs>
 
         <use style="filter: url(#floodFilter);"></use>
+      </svg>
+      <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="filter">
+            <feColorMatrix
+              type="matrix"
+              values="-0.191  1.390 -0.393  0.000  0.115 
+               0.225  0.330  0.253  0.000  0.115 
+               0.721  0.628 -0.542  0.000  0.115 
+               0.000  0.000  0.000  1.000  0.000"
+            ></feColorMatrix>
+          </filter>
+        </defs>
+        <rect
+          fill="gray"
+          x="1"
+          y="1"
+          width="50"
+          height="50"
+          filter="url(#filter)"
+        />
+      </svg>
+      <svg width="50" height="50">
+        <defs>
+          <filter id="aquamarin">
+            <feColorMatrix
+              in="SourceGraphic"
+              type="matrix"
+              values="0.0941176470588235 0 0 0 0, 0 0.7686274509803922 0 0 0, 0 0 0.8784313725490196 0 0, 0 0 0 1 0"
+            />
+          </filter>
+        </defs>
+        <rect
+          fill="gray"
+          x="1"
+          y="1"
+          width="50"
+          height="50"
+          filter="url(#aquamarin)"
+        />
       </svg>
     </div>
   </div>
