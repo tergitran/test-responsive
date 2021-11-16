@@ -37,11 +37,16 @@
     <!-- <div id="modal">
       <div class="content"></div>
     </div> -->
+
     <div class="logo"></div>
     <img src="./assets/emp-logo2.svg" />
     <img src="./assets/design.svg" />
     <div style="transform: translate3d(0, 0, 0); margin-botton: 10px">
-    <img src="./assets/dmp-logo-new.svg" style="margin-top: 50px; transform: scale(1);"  width="32"/>
+      <img
+        src="./assets/dmp-logo-new.svg"
+        style="margin-top: 50px; transform: scale(1);"
+        width="32"
+      />
     </div>
     <img src="./assets/logo-not-shadow.svg" width="32" />
 
@@ -163,6 +168,17 @@ export default {
       chartBarData: {},
     };
   },
+  computed: {
+    isSafari() {
+      return (
+        navigator.userAgent.toLowerCase().indexOf("safari") != -1 &&
+        navigator.userAgent
+          .toLowerCase()
+          .indexOf("chrome")
+          .toLowerCase() == -1
+      );
+    },
+  },
   methods: {
     myFunction() {
       var app = document.getElementById("app");
@@ -178,6 +194,7 @@ export default {
     },
   },
   created() {
+    alert("hello:    " + navigator.userAgent);
     let labels = [];
     let dataList = [[], []];
     let initYear = 2000;
