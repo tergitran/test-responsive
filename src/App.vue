@@ -194,7 +194,13 @@ export default {
     },
   },
   created() {
-    alert("hello:    " + navigator.userAgent);
+    let a = navigator.userAgent.toLowerCase().indexOf("safari") != -1;
+    let b = navigator.userAgent.toLowerCase().indexOf("chrome") == -1;
+    console.log("type of a", a, b);
+    let isSafari =
+      navigator.userAgent.toLowerCase().indexOf("safari") != -1 &&
+      navigator.userAgent.toLowerCase().indexOf("chrome") == -1;
+    alert("In Safari:    " + isSafari + " " + a + " " + b);
     let labels = [];
     let dataList = [[], []];
     let initYear = 2000;
