@@ -87,6 +87,23 @@
           <use xlink:href="#heart-icon"></use>
         </g>
       </svg>
+
+      <svg width="50" height="50">
+        <defs>
+          <filter id="floodFilter" filterUnits="userSpaceOnUse">
+            <feFlood
+              x="0"
+              y="0"
+              width="50"
+              height="50"
+              flood-color="green"
+              flood-opacity="0.5"
+            ></feFlood>
+          </filter>
+        </defs>
+
+        <use style="filter: url(#floodFilter);"></use>
+      </svg>
     </div>
   </div>
 </template>
@@ -252,8 +269,8 @@ export default {
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
 }
 
 @keyframes showModal {
