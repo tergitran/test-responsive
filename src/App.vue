@@ -40,7 +40,9 @@
     <div class="logo"></div>
     <img src="./assets/emp-logo2.svg" />
     <img src="./assets/design.svg" />
-    <img src="./assets/dmp-logo-new.svg" />
+    <div style="transform: translate3d(0, 0, 0); margin-botton: 10px">
+    <img src="./assets/dmp-logo-new.svg" style="margin-top: 50px; transform: scale(1);"  width="32"/>
+    </div>
     <img src="./assets/logo-not-shadow.svg" width="32" />
 
     <svg height="0" width="0" style="position:absolute;margin-left: -100%;">
@@ -55,7 +57,7 @@
       </filter>
 
       <filter id="shadow2">
-        <feDropShadow dx="0" dy="0" stdDeviation="0.5" flood-color="cyan" />
+        <feDropShadow dx="0" dy="0" stdDeviation="0.2" flood-color="cyan" />
       </filter>
 
       <filter id="shadow3">
