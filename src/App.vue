@@ -40,7 +40,7 @@
     <div class="logo"></div>
     <img src="./assets/emp-logo2.svg" />
     <img src="./assets/design.svg" />
-    <img src="./assets/dmp-logo-new.svg" />
+    <img src="./assets/dmp-logo-new.svg" style="margin-top: 50px; transform: scale(2); transform: translate3d(0,0,0);" />
     <img src="./assets/logo-not-shadow.svg" width="32" />
 
     <svg height="0" width="0" style="position:absolute;margin-left: -100%;">
