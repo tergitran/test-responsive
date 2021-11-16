@@ -38,7 +38,7 @@
       <div class="content"></div>
     </div> -->
 
-    <div class="logo"></div>
+    <!-- <div class="logo"></div>
     <img src="./assets/emp-logo2.svg" />
     <img src="./assets/design.svg" />
     <div style="transform: translate3d(0, 0, 0); margin-botton: 10px">
@@ -152,7 +152,10 @@
           filter="url(#aquamarin)"
         />
       </svg>
-    </div>
+    </div> -->
+    {{ isSafari }}
+    <img v-if="isSafari" src="./assets/dmp-logo-new-no-shadow.svg" />
+    <img v-else src="./assets/dmp-logo-new.svg" />
   </div>
 </template>
 
@@ -171,11 +174,8 @@ export default {
   computed: {
     isSafari() {
       return (
-        navigator.userAgent.toLowerCase().indexOf("safari") != -1 &&
-        navigator.userAgent
-          .toLowerCase()
-          .indexOf("chrome")
-          .toLowerCase() == -1
+        navigator.userAgent.indexOf("Safari") != -1 &&
+        navigator.userAgent.indexOf("Chrome") == -1
       );
     },
   },
@@ -194,12 +194,11 @@ export default {
     },
   },
   created() {
-    let a = navigator.userAgent.toLowerCase().indexOf("safari") != -1;
-    let b = navigator.userAgent.toLowerCase().indexOf("chrome") == -1;
-    console.log("type of a", a, b);
+    let a = navigator.userAgent.indexOf("Safari") != -1;
+    let b = navigator.userAgent.indexOf("Chrome") == -1;
     let isSafari =
-      navigator.userAgent.toLowerCase().indexOf("safari") != -1 &&
-      navigator.userAgent.toLowerCase().indexOf("chrome") == -1;
+      navigator.userAgent.indexOf("Safari") != -1 &&
+      navigator.userAgent.indexOf("Chrome") == -1;
     alert("In Safari:    " + isSafari + " " + a + " " + b);
     let labels = [];
     let dataList = [[], []];
