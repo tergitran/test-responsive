@@ -162,6 +162,10 @@
     <img src="./assets/origin-no-shadow.svg" />
     <img src="./assets/origin.svg" />
     <img src="./assets/design.svg" />
+    <br />
+    <div id="svg">
+      <div></div>
+    </div>
   </div>
 </template>
 
@@ -340,6 +344,29 @@ export default {
   /* width: 100vh; */
   background-color: blueviolet;
   animation: showModal 4s;
+}
+
+#svg {
+  display: inline-block;
+  width: 44px;
+  height: 36px;
+
+  div {
+    position: relative;
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    height: 100%;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 400%;
+      height: 400%;
+      background-image: url("~@/assets/origin.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .logo {
