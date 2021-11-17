@@ -160,6 +160,8 @@
     <img v-else src="./assets/origin.svg" />
     <span>-</span>
     <img src="./assets/origin-no-shadow.svg" />
+    <img src="./assets/origin.svg" />
+    <img src="./assets/design.svg" />
   </div>
 </template>
 
