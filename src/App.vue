@@ -199,6 +199,7 @@ export default {
     let isSafari =
       navigator.userAgent.indexOf("Safari") != -1 &&
       navigator.userAgent.indexOf("Chrome") == -1;
+    alert("Response:    " + navigator.userAgent);
     alert("In Safari:    " + isSafari + " " + a + " " + b);
     let labels = [];
     let dataList = [[], []];
