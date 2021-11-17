@@ -153,11 +153,13 @@
         />
       </svg>
     </div> -->
-    {{ isSafari }}
+    <!-- {{ isSafari }} -->
     <img v-if="isSafari" src="./assets/dmp-logo-new-no-shadow.svg" />
     <img v-else src="./assets/dmp-logo-new.svg" />
     <img v-if="isSafari" src="./assets/origin-no-shadow.svg" />
     <img v-else src="./assets/origin.svg" />
+    <span>-</span>
+    <img src="./assets/origin-no-shadow.svg" />
   </div>
 </template>
 
