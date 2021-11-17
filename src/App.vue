@@ -154,14 +154,16 @@
       </svg>
     </div> -->
     <!-- {{ isSafari }} -->
-    <img v-if="isSafari" src="./assets/dmp-logo-new-no-shadow.svg" />
+    <!-- <img v-if="isSafari" src="./assets/dmp-logo-new-no-shadow.svg" />
     <img v-else src="./assets/dmp-logo-new.svg" />
     <img v-if="isSafari" src="./assets/origin-no-shadow.svg" />
     <img v-else src="./assets/origin.svg" />
     <span>-</span>
-    <img src="./assets/origin-no-shadow.svg" />
-    <img src="./assets/origin.svg" />
-    <img src="./assets/design.svg" />
+    <img src="./assets/origin-no-shadow.svg" /> -->
+    <div class="w-img">
+      <img class="up-size" src="./assets/origin.svg" />
+    </div>
+    <!-- <img src="./assets/design.svg" /> -->
     <br />
     <div id="svg">
       <div></div>
@@ -319,6 +321,8 @@ export default {
 }
 #app {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .button {
   margin-top: 50px;
@@ -344,6 +348,19 @@ export default {
   /* width: 100vh; */
   background-color: blueviolet;
   animation: showModal 4s;
+}
+
+.w-img {
+  display: inline-block;
+  width: 44px;
+  height: 36px;
+}
+.up-size {
+  height: 400%;
+  width: 400%;
+  vertical-align: middle;
+  transform: scale(0.25);
+  transform-origin: 0 0;
 }
 
 #svg {
