@@ -174,8 +174,11 @@ export default {
   computed: {
     isSafari() {
       return (
-        navigator.userAgent.indexOf("Safari") != -1 &&
-        navigator.userAgent.indexOf("Chrome") == -1
+        navigator.vendor &&
+        navigator.vendor.indexOf("Apple") > -1 &&
+        navigator.userAgent &&
+        navigator.userAgent.indexOf("CriOS") == -1 &&
+        navigator.userAgent.indexOf("FxiOS") == -1
       );
     },
   },
@@ -194,13 +197,20 @@ export default {
     },
   },
   created() {
-    let a = navigator.userAgent.indexOf("Safari") != -1;
-    let b = navigator.userAgent.indexOf("Chrome") == -1;
-    let isSafari =
-      navigator.userAgent.indexOf("Safari") != -1 &&
-      navigator.userAgent.indexOf("Chrome") == -1;
-    alert("Response:    " + navigator.userAgent);
-    alert("In Safari:    " + isSafari + " " + a + " " + b);
+    // let a = navigator.userAgent.indexOf("Safari") != -1;
+    // let b = navigator.userAgent.indexOf("Chrome") == -1;
+    // let isSafari =
+    //   navigator.userAgent.indexOf("Safari") != -1 &&
+    //   navigator.userAgent.indexOf("Chrome") == -1;
+    // var isSafari =
+    //   navigator.vendor &&
+    //   navigator.vendor.indexOf("Apple") > -1 &&
+    //   navigator.userAgent &&
+    //   navigator.userAgent.indexOf("CriOS") == -1 &&
+    //   navigator.userAgent.indexOf("FxiOS") == -1;
+    // alert("Response:    " + navigator.userAgent);
+    // alert("In Safari:    " + isSafari );
+    alert("vendor  " + navigator.vendor);
     let labels = [];
     let dataList = [[], []];
     let initYear = 2000;
